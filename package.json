@@ -1,13 +1,15 @@
 {
   "name": "@vanloenenconsultancy/vue3-treeselect",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "description": "Tree select hierarchical component for vue 3 (next)",
   "main": "dist/vue3-treeselect.mjs",
   "unpkg": "dist/vue3-treeselect.umd.js",
+  "types": "dist/index.d.ts",
   "author": "megafetis",
   "scripts": {
     "build": "vite build --mode production",
     "preview": "vite preview",
+    "generate:types": "vue-tsc -p tsconfig-build.json --declaration --emitDeclarationOnly true --outdir ./dist",
     "dev": "vite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -49,6 +51,7 @@
   "files": [
     "dist/*.js",
     "dist/*.css",
+    "dist/*.ts",
     "styles"
   ],
   "keywords": [
