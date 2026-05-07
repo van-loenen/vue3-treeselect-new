@@ -1,39 +1,54 @@
-import { defineConfig } from 'vite';
-import vue from '@vitejs/plugin-vue';
-import { fileURLToPath } from 'url';
-import vueJsx from '@vitejs/plugin-vue-jsx'
-import path from 'path';
-
-const filename = fileURLToPath(import.meta.url);
-const pathSegments = path.dirname(filename);
-
-export default defineConfig({
-    plugins: [vue(), vueJsx({})],
-    resolve: {
+import { defineConfig } from 'vite'
+import { resolve } from 'path'
+import vue from '@vitejs/plugin-vue'
+// https://vitejs.dev/config/
+export default defineConfig(({ mode }) => {
+  if (mode === 'live-demo') {
+    return {
+      base: './',
+      plugins: [vue()],
+      test: {
+        globals: true,
+      },
+      resolve: {
         alias: {
-            '@': path.resolve(pathSegments, './src'),
+          '~': resolve(__dirname, 'src', 'vueTreeSelect'),
         },
-        extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json'],
-    },
-    build: {
+      },
+      build: {
+        rollupOptions: {
+          input: ['index.html'],
+        },
+      },
+    }
+  } else {
+    return {
+      plugins: [vue()],
+      test: {
+        globals: true,
+        setupFiles: 'src/setupTests.ts',
+        includeSource: ['src/**/*.spec.ts', 'src/**/*.test.ts'],
+      },
+      resolve: {
+        alias: {
+          '~': resolve(__dirname, 'src', 'vueTreeSelect'),
+        },
+      },
+      build: {
         lib: {
-            entry: path.resolve(__dirname, 'src/index.js'),
-            name: 'Vue3Treeselect',
-            fileName: 'vue3-treeselect',
-        },
-        commonjsOptions: {
-            requireReturnsDefault: "preferred",
-            transformMixedEsModules: true,
+          entry: resolve(__dirname, 'src/vueTreeSelect/index.ts'),
+          name: 'VueTreeSelect',
+          fileName: 'vue3-treeselect',
         },
         rollupOptions: {
-            external: ['vue'],
-            output: {
-                // Provide global variables to use in the UMD build
-                // Add external deps here
-                globals: {
-                    vue: 'Vue',
-                },
+          external: ['vue'],
+          output: {
+            globals: {
+              vue: 'Vue',
             },
+          },
         },
-    },
+      },
+    }
+  }
 })

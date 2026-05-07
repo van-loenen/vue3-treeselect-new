@@ -27,13 +27,13 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: 'vue-treeselect',
 }
 </script>
 
-<script setup>
+<script lang="ts" setup>
 import { computed, defineProps, reactive, watch, defineEmits, getCurrentInstance, ref, nextTick, onMounted, provide, useSlots, toRaw } from 'vue';
 import fuzzysearch from 'fuzzysearch'
 import {
@@ -52,10 +52,11 @@ import {
   ALL_CHILDREN, ALL_DESCENDANTS, LEAF_CHILDREN, LEAF_DESCENDANTS,
   ORDER_SELECTED, LEVEL, INDEX,
 } from '../constants'
-import HiddenFields from '@/components/HiddenFields.vue'
-import Control from '@/components/Control.vue'
-import Menu from '@/components/Menu.vue'
-import MenuPortal from '@/components/MenuPortal.vue'
+import HiddenFields from './HiddenFields.vue'
+import Control from './Control.vue'
+import Menu from './Menu.vue'
+import MenuPortal from './MenuPortal.vue'
+import '../../styles/style.less'
 
 const control = ref(null);
 const wrapper = ref(null);
@@ -1996,14 +1997,14 @@ watch(computedModelValue, () => {
 /** Watch END */
 
 onMounted(() => {
-  verifyProps()
-  resetFlags()
+  //verifyProps()
+  // resetFlags()
   state.isReady = true;
-  if (props.autoFocus) focusInput()
-  if (!props.options && !props.async && props.autoLoadRootOptions) loadRootOptions()
-  if (props.alwaysOpen) openMenu()
-  if (props.async && props.defaultOptions) handleRemoteSearch()
-  buildForestState();
+  // if (props.autoFocus) focusInput()
+  // if (!props.options && !props.async && props.autoLoadRootOptions) loadRootOptions()
+  // if (props.alwaysOpen) openMenu()
+  // if (props.async && props.defaultOptions) handleRemoteSearch()
+  // buildForestState();
 })
 provide('instance', instance.value);
 </script>

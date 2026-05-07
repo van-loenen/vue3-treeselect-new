@@ -12,9 +12,9 @@
     <Input ref="input" :class="{ 'as-overlay': hasValue }" />
 </template>
 
-<script>
-  import Input from '@/components/Input.vue'
-  import Placeholder from '@/components/Placeholder.vue'
+<script lang="ts">
+  import Input from './Input.vue'
+  import Placeholder from './Placeholder.vue'
 
   export default {
     name: 'vue-treeselect--single-value',

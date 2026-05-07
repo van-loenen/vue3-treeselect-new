@@ -9,9 +9,9 @@
   </template>
 </template>
 
-<script>
+<script lang="ts">
   import { isNaN } from '../utils'
-  import {defineComponent} from 'vue';
+  import { defineComponent } from 'vue';
 
   export default defineComponent({
     name: 'vue-treeselect--hidden-fields',

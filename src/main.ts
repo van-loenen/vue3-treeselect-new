@@ -1,6 +1,6 @@
-import Treeselect from '@/components/Treeselect.vue'
-import '../styles/style.less'
-import App from "@/App.vue"
+import Treeselect from './vueTreeSelect/components/Treeselect.vue'
+//import '@/styles/style.less'
+import App from "./App.vue"
 
 
 import { createApp } from "vue";
@@ -15,4 +15,4 @@ export {
   LOAD_ROOT_OPTIONS,
   LOAD_CHILDREN_OPTIONS,
   ASYNC_SEARCH,
-} from './constants'
+} from './vueTreeSelect/constants'

@@ -85,11 +85,11 @@
 </template>
 
 
-<script>
+<script lang="ts">
   import { UNCHECKED, INDETERMINATE, CHECKED } from '../constants'
   import { onLeftClick } from '../utils'
-  import Tip from '@/components/Tip.vue'
-  import ArrowIcon from '@/components/icons/Arrow.vue'
+  import Tip from './Tip.vue'
+  import ArrowIcon from './icons/Arrow.vue'
   import { Transition } from "vue";
 
   let arrowPlaceholder, checkMark, minusMark

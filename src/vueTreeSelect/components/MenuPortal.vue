@@ -2,10 +2,10 @@
   <div class="vue-treeselect__menu-placeholder" />
 </template>
 
-<script>
+<script lang="ts">
   import {createApp} from 'vue'
   import { watchSize, setupResizeAndScrollEventListeners, find } from '../utils'
-  import Menu from '@/components/Menu.vue'
+  import Menu from './Menu.vue'
 
   const PortalTarget = {
     name: 'vue-treeselect--portal-target',

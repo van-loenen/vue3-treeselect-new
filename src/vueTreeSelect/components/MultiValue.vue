@@ -12,10 +12,10 @@
     <Input ref="input" key="input" />
 </template>
 
-<script>
-  import MultiValueItem from '@/components/MultiValueItem.vue'
-  import Input from '@/components/Input.vue'
-  import Placeholder from '@/components/Placeholder.vue'
+<script lang="ts">
+  import MultiValueItem from './MultiValueItem.vue'
+  import Input from './Input.vue'
+  import Placeholder from './Placeholder.vue'
   import { TransitionGroup } from "vue";
 
   export default {

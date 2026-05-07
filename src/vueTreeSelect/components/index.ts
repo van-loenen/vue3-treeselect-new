@@ -1,0 +1,1 @@
+export { default as Treeselect } from './Treeselect.vue'

@@ -24,7 +24,7 @@
 </template>
 
 
-<script>
+<script lang="ts">
   import { debounce, includes } from '../utils'
   import { MIN_INPUT_WIDTH, KEY_CODES, INPUT_DEBOUNCE_DELAY } from '../constants'
 

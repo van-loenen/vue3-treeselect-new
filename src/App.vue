@@ -63,8 +63,8 @@
   </div>
 </template>
 
-<script>
-import Treeselect from "@/components/Treeselect.vue";
+<script lang="ts">
+import Treeselect from "./vueTreeSelect/components/Treeselect.vue";
 import { toRaw } from "vue";
 
 export default {

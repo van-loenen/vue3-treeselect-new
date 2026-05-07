@@ -25,12 +25,12 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
   import { onLeftClick, isPromise } from '../utils'
-  import SingleValue from '@/components/SingleValue.vue'
-  import MultiValue from '@/components/MultiValue.vue'
-  import DeleteIcon from '@/components/icons/Delete.vue'
-  import ArrowIcon from '@/components/icons/Arrow.vue'
+  import SingleValue from './SingleValue.vue'
+  import MultiValue from './MultiValue.vue'
+  import DeleteIcon from './icons/Delete.vue'
+  import ArrowIcon from './icons/Arrow.vue'
 
   export default {
     name: 'vue-treeselect--control',

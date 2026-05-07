@@ -48,11 +48,11 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
   import { MENU_BUFFER } from '../constants'
   import { watchSize, setupResizeAndScrollEventListeners } from '../utils'
-  import Option from '@/components/Option.vue'
-  import Tip from '@/components/Tip.vue'
+  import Option from './Option.vue'
+  import Tip from './Tip.vue'
   import { Transition, toRaw } from "vue";
 
   const directionMap = {

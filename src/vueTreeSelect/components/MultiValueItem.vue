@@ -11,9 +11,9 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
   import { onLeftClick } from '../utils'
-  import DeleteIcon from '@/components/icons/Delete.vue'
+  import DeleteIcon from './icons/Delete.vue'
 
   export default {
     name: 'vue-treeselect--multi-value-item',
