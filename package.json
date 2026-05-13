@@ -1,10 +1,9 @@
 {
   "name": "@vanloenenconsultancy/vue3-treeselect",
-  "version": "0.2.4",
+  "version": "0.2.58",
   "description": "Tree select hierarchical component for vue 3 (next)",
   "main": "dist/vue3-treeselect.mjs",
   "unpkg": "dist/vue3-treeselect.umd.js",
-  "types": "dist/index.d.ts",
   "author": "megafetis",
   "scripts": {
     "build": "vite build --mode production",
@@ -13,28 +12,17 @@
     "dev": "vite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "devDependencies": {
+  "dependencies": {
     "@types/ts-nameof": "4.2.5",
-    "css-loader": "^7.1.4",
-    "dotenv": "^8.6.0",
+    "dotenv": "^17.4.2",
     "easings-css": "2.1.1",
-    "file-loader": "^6.2.0",
     "fuzzysearch": "1.0.3",
-    "html-webpack-plugin": "^4.3.0",
     "is-promise": "4.0.0",
     "less": "^4.6.4",
-    "less-loader": "^12.3.2",
+    "lodash": "4.18.1",
     "material-colors": "1.2.6",
-    "mini-css-extract-plugin": "^2.10.2",
-    "resolve-url-loader": "^5.0.0",
     "sass": "^1.99.0",
-    "sass-loader": "^9.0.3",
-    "style-loader": "^1.2.1",
-    "ts-nameof": "5.0.0",
-    "url-loader": "^4.1.1",
     "vue": "^3.5.34",
-    "vue-loader": "17.4.2",
-    "vue-style-loader": "4.1.3",
     "watch-size": "2.0.0"
   },
   "peerDependencies": {
@@ -76,13 +64,14 @@
     "type": "git",
     "url": "git+https://github.com/r2rka1/vue3-treeselect"
   },
-  "dependencies": {
+  "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.6",
     "@vitejs/plugin-vue-jsx": "^5.1.5",
     "defu": "^6.1.7",
+    "ts-nameof": "5.0.0",
     "typescript": "^5.9.3",
-    "vite": "^8.0.11",
-    "vitest": "^4.1.5",
+    "vite": "^8.0.12",
+    "vitest": "^4.1.6",
     "vue-tsc": "^3.2.8"
   }
 }
