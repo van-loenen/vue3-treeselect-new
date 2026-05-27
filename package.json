@@ -1,6 +1,6 @@
 {
   "name": "@vanloenenconsultancy/vue3-treeselect",
-  "version": "0.2.58",
+  "version": "0.2.595",
   "description": "Tree select hierarchical component for vue 3 (next)",
   "main": "dist/vue3-treeselect.mjs",
   "unpkg": "dist/vue3-treeselect.umd.js",
@@ -21,8 +21,8 @@
     "less": "^4.6.4",
     "lodash": "4.18.1",
     "material-colors": "1.2.6",
-    "sass": "^1.99.0",
-    "vue": "^3.5.34",
+    "sass": "^1.100.0",
+    "vue": "^3.5.35",
     "watch-size": "2.0.0"
   },
   "peerDependencies": {
@@ -65,13 +65,13 @@
     "url": "git+https://github.com/r2rka1/vue3-treeselect"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^6.0.6",
+    "@vitejs/plugin-vue": "^6.0.7",
     "@vitejs/plugin-vue-jsx": "^5.1.5",
     "defu": "^6.1.7",
     "ts-nameof": "5.0.0",
     "typescript": "^5.9.3",
-    "vite": "^8.0.12",
-    "vitest": "^4.1.6",
-    "vue-tsc": "^3.2.8"
+    "vite": "^8.0.14",
+    "vitest": "^4.1.7",
+    "vue-tsc": "^3.3.2"
   }
 }

@@ -116,7 +116,7 @@ export default {
     },
     fakeLoadChildren() {
       return new Promise((res) => {
-        setTimeout(() => res(toRaw(this.options)),2000)
+        setTimeout(() => res(toRaw(this.options)), 2000)
       })
     },
     async loadOptions({ action, searchQuery, callback }) {
