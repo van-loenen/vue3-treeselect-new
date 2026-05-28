@@ -460,10 +460,11 @@
 .vue-treeselect__multi-value-item {
   .clickable();
 
-  display: inline-table;
+  display: flex;
+  gap:0.5rem;
   background: @treeselect-multi-value-item-bg;
   // Table elements do not have margin, so we set at the container element.
-  padding: @treeselect-multi-value-margin-y @treeselect-multi-value-margin-x;
+  padding: 3px;//@treeselect-multi-value-margin-y @treeselect-multi-value-margin-x;
   border: @treeselect-multi-value-item-border-width solid @treeselect-multi-value-item-border-color;
   border-radius: @treeselect-border-radius-sm;
   color: @treeselect-multi-value-font-color;
@@ -512,6 +513,7 @@
   padding-left: @treeselect-multi-value-padding-x;
   border-left: 1px solid @treeselect-multi-value-divider-color;
   line-height: 0;
+  display: flex;
 
   [dir="rtl"] & {
     border-left: 0 none;
@@ -528,6 +530,7 @@
   }
 
   > svg {
+    margin: auto;
     width: @treeselect-multi-value-remove-size;
     height: @treeselect-multi-value-remove-size;
   }
