@@ -1,7 +1,7 @@
 {
   "name": "@vanloenenconsultancy/vue3-treeselect",
-  "version": "0.2.596",
-  "description": "Tree select hierarchical component for vue 3 (next)",
+  "version": "0.2.597",
+  "description": "Tree select hierarchical component for Vue 3 (next)",
   "main": "dist/vue3-treeselect.mjs",
   "unpkg": "dist/vue3-treeselect.umd.js",
   "author": "megafetis",

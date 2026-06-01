@@ -26,6 +26,8 @@
                 @search-change="e => handleEvent(e, 'search-change')"
     />
 
+    <div>{{ test2 }}</div>
+
     <div class="heading">Slots</div>
 
     <Treeselect v-model="test3" :options="options"
@@ -60,6 +62,8 @@
                 :default-options="true"
                 :load-options="loadOptions"
     />
+
+    <div>{{ test4 }}</div>
   </div>
 </template>
 

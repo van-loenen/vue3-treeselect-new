@@ -1997,14 +1997,14 @@ watch(computedModelValue, () => {
 /** Watch END */
 
 onMounted(() => {
-  //verifyProps()
-  // resetFlags()
+  verifyProps()
+  resetFlags()
   state.isReady = true;
-  // if (props.autoFocus) focusInput()
-  // if (!props.options && !props.async && props.autoLoadRootOptions) loadRootOptions()
-  // if (props.alwaysOpen) openMenu()
-  // if (props.async && props.defaultOptions) handleRemoteSearch()
-  // buildForestState();
+  if (props.autoFocus) focusInput()
+  if (!props.options && !props.async && props.autoLoadRootOptions) loadRootOptions()
+  if (props.alwaysOpen) openMenu()
+  if (props.async && props.defaultOptions) handleRemoteSearch()
+  buildForestState();
 })
 provide('instance', instance.value);
 </script>
