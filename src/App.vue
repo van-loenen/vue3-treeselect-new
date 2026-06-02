@@ -18,6 +18,10 @@
     <Treeselect v-model="test2" :options="options"
                 :multiple="true"
                 :close-on-select="false"
+                value-consists-of="LEAF_PRIORITY"
+                :node-select-only-leaves="true"
+                :disable-branch-nodes="true"
+                :open-on-focus="true"
                 @open="e => handleEvent(e, 'open')"
                 @close="e => handleEvent(e, 'close')"
                 @update:model-value="e => handleEvent(e, 'update')"
@@ -59,6 +63,7 @@
 
     <Treeselect v-model="test4"
                 :async="true"
+                :open-on-focus="true"
                 :default-options="true"
                 :load-options="loadOptions"
     />
@@ -85,7 +90,7 @@ export default {
         symbol: "&#8486;",
         children: [ {
           id: 'aa',
-          label: 'Beta',
+          label: 'Beta Beta Beta Beta Beta', 
           symbol: "&#8492;"
         }, {
           id: 'ab',

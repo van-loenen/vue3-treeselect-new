@@ -124,7 +124,6 @@
         return instance.shouldShowOptionInMenu(node)
       },
       checkedState() {
-        console.log('i', this.instance)
         return this.instance.forest.checkedStateMap[this.node.id]
       },
       shouldShowCount() {

@@ -839,7 +839,7 @@ var It = /* @__PURE__ */ W(Nt, [["render", Ft]]), Lt = {
 			return e.shouldShowOptionInMenu(t);
 		},
 		checkedState() {
-			return console.log("i", this.instance), this.instance.forest.checkedStateMap[this.node.id];
+			return this.instance.forest.checkedStateMap[this.node.id];
 		},
 		shouldShowCount() {
 			return this.node.isBranch && (this.instance.localSearch.active ? this.instance.showCountOnSearchComputed : this.instance.showCount);
