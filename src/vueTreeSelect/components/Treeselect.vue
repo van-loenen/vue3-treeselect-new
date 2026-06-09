@@ -2,7 +2,7 @@
   <div ref="wrapper" :class=wrapperClass>
     <template v-if="state.isReady">
       <HiddenFields />
-      <Control ref="control">
+      <Control ref="control" @clicked="handleMouseDown" @toggle-menu="toggleMenu">
         <template v-if="$slots['value-label']" #value-label="{ node }">
           <slot name="value-label"
                 :node="node"/>
@@ -780,7 +780,6 @@ const instance = computed(() => ({
   resetSearchQuery,
   closeMenu,
   openMenu,
-  toggleMenu,
   toggleExpanded,
   buildForestState,
   enhancedNormalizer,
@@ -1220,26 +1219,35 @@ const focusInput = () => {
 const blurInput = () => {
   getInput().blur()
 };
-const handleMouseDown = () => { onLeftClick((evt) => {
+const handleMouseDown = (evt: Event) => {
+  console.log('1')
     evt.preventDefault()
     evt.stopPropagation()
 
+      console.log('2')
     if (props.disabled) return
 
+      console.log('3', props.openOnClick, state.menu.isOpen)
+    //isClickedOnValueContainer && 
     const isClickedOnValueContainer = getValueContainer().$el.contains(evt.target)
-    if (isClickedOnValueContainer && !state.menu.isOpen && (props.openOnClick || state.trigger.isFocused)) {
+    if (!state.menu.isOpen && (props.openOnClick || state.trigger.isFocused)) {
+       console.log('3.1')
       openMenu()
     }
 
+     console.log('4')
     if (state._blurOnSelect) {
+       console.log('5')
       blurInput()
     } else {
+       console.log('6')
       // Focus the input or prevent blurring.
       focusInput()
     }
 
+     console.log('7')
     resetFlags()
-  })};
+  };
 const handleClickOutside = (evt) => {
   // istanbul ignore else
   if (wrapper.value && !wrapper.value.contains(evt.target)) {
@@ -1440,6 +1448,7 @@ const closeMenu = () => {
   emit('close', getValue(), getInstanceId())
 };
 const openMenu = () => {
+  console.log('hmmm')
   if (props.disabled || state.menu.isOpen) return
   state.menu.isOpen = true
   nextTick(resetHighlightedOptionWhenNecessary)
@@ -1450,8 +1459,10 @@ const openMenu = () => {
 };
 const toggleMenu = () => {
   if (state.menu.isOpen) {
+    console.log('[close]')
     closeMenu()
   } else {
+    console.log('[open]')
     openMenu()
   }
 };

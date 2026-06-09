@@ -1,5 +1,5 @@
 <template>
-  <div class="vue-treeselect__control" @mousedown="instance.handleMouseDown">
+  <div class="vue-treeselect__control" @mousedown="handleMouseDown">
     <template v-if="isSingle">
       <SingleValue ref="value-container">
         <template v-if="$slots['value-label']" #value-label="{ node }">
@@ -19,7 +19,7 @@
     <div v-if="shouldShowX" class="vue-treeselect__x-container" :title="getTitleX()" @mousedown="handleMouseDownOnX">
       <DeleteIcon class="vue-treeselect__x" />
     </div>
-    <div class="vue-treeselect__control-arrow-container" @mousedown="handleMouseDownOnArrow">
+    <div class="vue-treeselect__control-arrow-container" @mousedown.prevent.stop="handleMouseToggle">
       <ArrowIcon :class="getArrowClass()" />
     </div>
   </div>
@@ -34,6 +34,7 @@
 
   export default {
     name: 'vue-treeselect--control',
+    emits: ['clicked', 'toggleMenu'],
     inject: [ 'instance' ],
     components: { SingleValue,
       MultiValue,
@@ -101,6 +102,16 @@
           'vue-treeselect__control-arrow': true,
           'vue-treeselect__control-arrow--rotated': this.instance.menu.isOpen,
         }
+      },
+
+      handleMouseDown(evt: Event) {
+        console.log('clicked!!')
+        this.$emit('clicked', evt)
+      },
+
+      handleMouseToggle(evt: Event) {
+        console.log('clicked!!')
+        this.$emit('toggleMenu', evt)
       },
 
       handleMouseDownOnX: onLeftClick(function handleMouseDownOnX(evt) {

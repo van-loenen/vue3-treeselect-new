@@ -371,7 +371,7 @@ function K(t, n, r, i, a, c) {
 		key: "hidden-field-" + n
 	}, null, 8, G))), 128)) : o("", !0);
 }
-var it = /* @__PURE__ */ W(rt, [["render", K]]), q = [
+var it = /*#__PURE__*/ W(rt, [["render", K]]), q = [
 	U.ENTER,
 	U.END,
 	U.HOME,
@@ -547,7 +547,7 @@ function ct(t, n, r, i, a, l) {
 		class: "vue-treeselect__sizer"
 	}, S(t.value), 513)) : o("", !0)], 64)) : o("", !0)], 40, ot);
 }
-var lt = /* @__PURE__ */ W(at, [["render", ct]]), J = {
+var lt = /*#__PURE__*/ W(at, [["render", ct]]), J = {
 	name: "vue-treeselect--placeholder",
 	inject: ["instance"],
 	computed: {
@@ -568,7 +568,7 @@ function Y(e, t, n, r, i, a) {
 		"vue-treeselect-helper-hide": a.hasValue || a.hasSearchQuery
 	}) }, S(a.instance.placeholder), 3);
 }
-var ut = /* @__PURE__ */ W(J, [["render", Y]]), dt = {
+var ut = /*#__PURE__*/ W(J, [["render", Y]]), dt = {
 	name: "vue-treeselect--single-value",
 	inject: ["instance"],
 	components: {
@@ -610,14 +610,14 @@ function ft(t, n, r, i, l, f) {
 		}, null, 8, ["class"])
 	], 64);
 }
-var pt = /* @__PURE__ */ W(dt, [["render", ft]]), mt = { name: "vue-treeselect--x" }, ht = {
+var pt = /*#__PURE__*/ W(dt, [["render", ft]]), mt = { name: "vue-treeselect--x" }, ht = {
 	xmlns: "http://www.w3.org/2000/svg",
 	viewBox: "0 0 348.333 348.333"
 };
 function gt(e, t, n, r, i, a) {
 	return _(), s("svg", ht, [...t[0] ||= [c("path", { d: "M336.559 68.611L231.016 174.165l105.543 105.549c15.699 15.705 15.699 41.145 0 56.85-7.844 7.844-18.128 11.769-28.407 11.769-10.296 0-20.581-3.919-28.419-11.769L174.167 231.003 68.609 336.563c-7.843 7.844-18.128 11.769-28.416 11.769-10.285 0-20.563-3.919-28.413-11.769-15.699-15.698-15.699-41.139 0-56.85l105.54-105.549L11.774 68.611c-15.699-15.699-15.699-41.145 0-56.844 15.696-15.687 41.127-15.687 56.829 0l105.563 105.554L279.721 11.767c15.705-15.687 41.139-15.687 56.832 0 15.705 15.699 15.705 41.145.006 56.844z" }, null, -1)]]);
 }
-var _t = /* @__PURE__ */ W(mt, [["render", gt]]), vt = {
+var _t = /*#__PURE__*/ W(mt, [["render", gt]]), vt = {
 	name: "vue-treeselect--multi-value-item",
 	inject: ["instance"],
 	components: { DeleteIcon: _t },
@@ -695,14 +695,14 @@ function Ct(t, n, r, i, u, f) {
 		}, null, 512)
 	], 64);
 }
-var wt = /* @__PURE__ */ W(Q, [["render", Ct]]), Tt = { name: "vue-treeselect--arrow" }, Et = {
+var wt = /*#__PURE__*/ W(Q, [["render", Ct]]), Tt = { name: "vue-treeselect--arrow" }, Et = {
 	xmlns: "http://www.w3.org/2000/svg",
 	viewBox: "0 0 292.362 292.362"
 };
 function Dt(e, t, n, r, i, a) {
 	return _(), s("svg", Et, [...t[0] ||= [c("path", { d: "M286.935 69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952 0-9.233 1.807-12.85 5.424C1.807 72.998 0 77.279 0 82.228c0 4.948 1.807 9.229 5.424 12.847l127.907 127.907c3.621 3.617 7.902 5.428 12.85 5.428s9.233-1.811 12.847-5.428L286.935 95.074c3.613-3.617 5.427-7.898 5.427-12.847 0-4.948-1.814-9.229-5.427-12.85z" }, null, -1)]]);
 }
-var Ot = /* @__PURE__ */ W(Tt, [["render", Dt]]), kt = {
+var Ot = /*#__PURE__*/ W(Tt, [["render", Dt]]), kt = {
 	name: "vue-treeselect--control",
 	inject: ["instance"],
 	components: {
@@ -791,7 +791,7 @@ function jt(e, t, n, r, i, u) {
 		}, [d(g, { class: m(u.getArrowClass()) }, null, 8, ["class"])], 32)
 	], 32);
 }
-var Mt = /* @__PURE__ */ W(kt, [["render", jt]]), Nt = f({
+var Mt = /*#__PURE__*/ W(kt, [["render", jt]]), Nt = f({
 	name: "vue-treeselect--tip",
 	props: {
 		type: {
@@ -807,7 +807,7 @@ var Mt = /* @__PURE__ */ W(kt, [["render", jt]]), Nt = f({
 function Ft(e, t, n, r, i, a) {
 	return _(), s("div", { class: m(`vue-treeselect__tip vue-treeselect__${e.type}-tip`) }, [c("div", Pt, [c("span", { class: m(`vue-treeselect__icon-${e.icon}`) }, null, 2)]), c("span", { class: m(`vue-treeselect__tip-text vue-treeselect__${e.type}-tip-text`) }, [b(e.$slots, "default")], 2)], 2);
 }
-var It = /* @__PURE__ */ W(Nt, [["render", Ft]]), Lt = {
+var It = /*#__PURE__*/ W(Nt, [["render", Ft]]), Lt = {
 	name: "VueTreeselectOption",
 	inject: ["instance"],
 	components: {
@@ -877,10 +877,10 @@ var It = /* @__PURE__ */ W(Nt, [["render", Ft]]), Lt = {
 	class: "vue-treeselect__checkbox-container"
 }, Vt = {
 	key: 2,
-	class: /* @__PURE__ */ m("vue-treeselect__label")
+	class: /*@__PURE__*/ m("vue-treeselect__label")
 }, Ht = {
 	key: 0,
-	class: /* @__PURE__ */ m("vue-treeselect__count")
+	class: /*@__PURE__*/ m("vue-treeselect__count")
 }, Ut = { key: 0 }, Wt = { class: "vue-treeselect__list" }, Gt = ["title"];
 function Kt(n, r, i, f, p, h) {
 	let g = x("ArrowIcon"), ee = x("VueTreeselectOption"), v = x("Tip");
@@ -964,7 +964,7 @@ function Kt(n, r, i, f, p, h) {
 		_: 3
 	})])) : o("", !0)], 2);
 }
-var qt = /* @__PURE__ */ W(Lt, [["render", Kt]]), Jt = {
+var qt = /*#__PURE__*/ W(Lt, [["render", Kt]]), Jt = {
 	top: "top",
 	bottom: "bottom",
 	above: "top",
@@ -1113,7 +1113,7 @@ function Qt(t, n, r, i, c, d) {
 		b(t.$slots, "after-list")
 	], 36)) : o("", !0)], 4);
 }
-var $t = /* @__PURE__ */ W(Yt, [["render", Qt]]), en = {
+var $t = /*#__PURE__*/ W(Yt, [["render", Qt]]), en = {
 	name: "vue-treeselect--portal-target",
 	inject: ["instance"],
 	watch: {
@@ -1198,7 +1198,7 @@ var $t = /* @__PURE__ */ W(Yt, [["render", Qt]]), en = {
 function rn(e, t, n, r, i, a) {
 	return _(), s("div", nn);
 }
-var an = /* @__PURE__ */ W(tn, [["render", rn]]), on = /* @__PURE__ */ f({
+var an = /*#__PURE__*/ W(tn, [["render", rn]]), on = /* @__PURE__ */ f({
 	name: "vue-treeselect",
 	props: {
 		allowClearingDisabled: {
