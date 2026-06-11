@@ -1,26 +1,30 @@
 <template>
-  <div class="vue-treeselect__control" @mousedown="handleMouseDown">
-    <template v-if="isSingle">
-      <SingleValue ref="value-container">
-        <template v-if="$slots['value-label']" #value-label="{ node }">
-          <slot name="value-label"
-                :node="node"/>
-        </template>
-      </SingleValue>
-    </template>
-    <template v-else>
-      <MultiValue ref="value-container">
-        <template v-if="$slots['value-label']" #value-label="{ node }">
-          <slot name="value-label"
-                :node="node"/>
-        </template>
-      </MultiValue>
-    </template>
-    <div v-if="shouldShowX" class="vue-treeselect__x-container" :title="getTitleX()" @mousedown="handleMouseDownOnX">
-      <DeleteIcon class="vue-treeselect__x" />
+  <div class="vue-treeselect__control__container">
+    <div class="vue-treeselect__control" @mousedown="handleMouseDown">
+      <template v-if="isSingle">
+        <SingleValue ref="value-container">
+          <template v-if="$slots['value-label']" #value-label="{ node }">
+            <slot name="value-label"
+                  :node="node"/>
+          </template>
+        </SingleValue>
+      </template>
+      <template v-else>
+        <MultiValue ref="value-container">
+          <template v-if="$slots['value-label']" #value-label="{ node }">
+            <slot name="value-label"
+                  :node="node"/>
+          </template>
+        </MultiValue>
+      </template>
     </div>
-    <div class="vue-treeselect__control-arrow-container" @mousedown.prevent.stop="handleMouseToggle">
-      <ArrowIcon :class="getArrowClass()" />
+    <div class="vue-treeselect__control__buttons">
+     <div v-if="shouldShowX" class="vue-treeselect__x-container" :title="getTitleX()" @mousedown="handleMouseDownOnX">
+        <DeleteIcon class="vue-treeselect__x" />
+      </div>
+      <div class="vue-treeselect__control-arrow-container" @mousedown.prevent.stop="handleMouseToggle">
+        <ArrowIcon :class="getArrowClass()" />
+      </div>
     </div>
   </div>
 </template>

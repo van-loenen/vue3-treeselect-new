@@ -63,6 +63,7 @@
 
     <Treeselect v-model="test4"
                 :async="true"
+                :multiple="true"
                 :open-on-click="true"
                 :default-options="true"
                 :load-options="loadOptions"

@@ -1448,7 +1448,6 @@ const closeMenu = () => {
   emit('close', getValue(), getInstanceId())
 };
 const openMenu = () => {
-  console.log('hmmm')
   if (props.disabled || state.menu.isOpen) return
   state.menu.isOpen = true
   nextTick(resetHighlightedOptionWhenNecessary)

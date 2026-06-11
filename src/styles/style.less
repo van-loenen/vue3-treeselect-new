@@ -350,16 +350,31 @@
  * Control
  */
 
-.vue-treeselect__control {
-  .row();
-
-  height: @treeselect-control-height;
+ .vue-treeselect__control__container {
+  display: flex;
+  gap: @treeselect-padding;
   border: @treeselect-control-border-width solid @treeselect-control-border-color;
   border-radius: @treeselect-control-border-radius;
   background: @treeselect-control-bg;
   transition-duration: @treeselect-transition-duration;
   transition-property: border-color, box-shadow, width, height, background-color, opacity;
   transition-timing-function: @ease-out-cubic;
+ }
+.vue-treeselect__control__buttons {
+  display: flex;
+  margin: auto;
+  padding-right: @treeselect-padding;
+}
+.vue-treeselect__control {
+  display: flex;
+  gap: @treeselect-padding;
+  flex-wrap: wrap;
+  flex: 1;
+  // height: @treeselect-control-height;
+
+  padding-top: @treeselect-padding;
+  padding-bottom: @treeselect-padding;
+  padding-left: @treeselect-padding;
 
   .vue-treeselect:not(.vue-treeselect--disabled):not(.vue-treeselect--focused) &:hover {
     border-color: @treeselect-control-border-color-hover;
@@ -447,9 +462,6 @@
 
 .vue-treeselect__multi-value-item-container {
   display: inline-block;
-  padding-top: @treeselect-padding;
-  padding-bottom: @treeselect-padding;
-  padding-right: @treeselect-padding;
   vertical-align: top;
 
   [dir="rtl"] & {
