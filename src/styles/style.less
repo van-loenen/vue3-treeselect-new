@@ -359,7 +359,13 @@
   transition-duration: @treeselect-transition-duration;
   transition-property: border-color, box-shadow, width, height, background-color, opacity;
   transition-timing-function: @ease-out-cubic;
+
+  .vue-treeselect--focused:not(.vue-treeselect--open) & {
+    border-color: @treeselect-control-border-color-focus;
+    box-shadow: @treeselect-control-box-shadow-focus;
+  }
  }
+
 .vue-treeselect__control__buttons {
   display: flex;
   margin: auto;
@@ -378,11 +384,6 @@
 
   .vue-treeselect:not(.vue-treeselect--disabled):not(.vue-treeselect--focused) &:hover {
     border-color: @treeselect-control-border-color-hover;
-  }
-
-  .vue-treeselect--focused:not(.vue-treeselect--open) & {
-    border-color: @treeselect-control-border-color-focus;
-    box-shadow: @treeselect-control-box-shadow-focus;
   }
 
   .vue-treeselect--disabled & {
