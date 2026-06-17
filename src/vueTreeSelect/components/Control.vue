@@ -109,12 +109,10 @@
       },
 
       handleMouseDown(evt: Event) {
-        console.log('clicked!!')
         this.$emit('clicked', evt)
       },
 
       handleMouseToggle(evt: Event) {
-        console.log('clicked!!')
         this.$emit('toggleMenu', evt)
       },
 

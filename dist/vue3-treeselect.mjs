@@ -746,10 +746,10 @@ var kt = /*#__PURE__*/ W(Et, [["render", Ot]]), At = {
 			};
 		},
 		handleMouseDown(e) {
-			console.log("clicked!!"), this.$emit("clicked", e);
+			this.$emit("clicked", e);
 		},
 		handleMouseToggle(e) {
-			console.log("clicked!!"), this.$emit("toggleMenu", e);
+			this.$emit("toggleMenu", e);
 		},
 		handleMouseDownOnX: A(function(e) {
 			e.stopPropagation(), e.preventDefault();
@@ -1799,13 +1799,13 @@ var cn = /*#__PURE__*/ W(an, [["render", sn]]), ln = /* @__PURE__ */ f({
 			};
 			t({ children: D.forest.normalizedOptions });
 		}, Fe = (e) => {
-			e ? document.addEventListener("mousedown", $e, !1) : document.removeEventListener("mousedown", $e, !1);
+			e ? document.addEventListener("mousedown", $e, !1) : document.removeEventListener("blur", $e, !1);
 		}, Le = () => c.value.$refs["value-container"], Re = () => Le().$refs.input, He = () => {
 			Re().focus();
 		}, Ze = () => {
 			Re().blur();
 		}, Qe = (e) => {
-			console.log("1"), e.preventDefault(), e.stopPropagation(), console.log("2"), !E.disabled && (console.log("3", E.openOnClick, D.menu.isOpen), Le().$el.contains(e.target), !D.menu.isOpen && (E.openOnClick || D.trigger.isFocused) && (console.log("3.1"), J()), console.log("4"), D._blurOnSelect ? (console.log("5"), Ze()) : (console.log("6"), He()), console.log("7"), we());
+			e.preventDefault(), e.stopPropagation(), !E.disabled && (Le().$el.contains(e.target), !D.menu.isOpen && (E.openOnClick || D.trigger.isFocused) && J(), D._blurOnSelect ? Ze() : He(), we());
 		}, $e = (e) => {
 			// istanbul ignore else
 			u.value && !u.value.contains(e.target) && (Ze(), q());
@@ -1871,7 +1871,7 @@ p(t);
 		}, J = () => {
 			E.disabled || D.menu.isOpen || (D.menu.isOpen = !0, p(K), p(wt), !E.options && !E.async && mt(), Fe(!0), T("open", F()));
 		}, dt = () => {
-			D.menu.isOpen ? (console.log("[close]"), q()) : (console.log("[open]"), J());
+			D.menu.isOpen ? q() : J();
 		}, ft = (e) => {
 			let t;
 			D.localSearch.active ? (t = e.isExpandedOnSearch = !e.isExpandedOnSearch, t && (e.showAllChildrenOnSearch = !0)) : t = e.isExpanded = !e.isExpanded, t && !e.childrenStates.isLoaded && ht(e);

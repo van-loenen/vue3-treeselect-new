@@ -116,9 +116,7 @@ export default {
     }
   },
   methods: {
-    handleEvent(event, type) {
-      console.log(event, type);
-    },
+    handleEvent(event, type) {},
     fakeLoad() {
       return new Promise((res) => {
         setTimeout(() => res(toRaw(this.highLevelOptions)),2000)

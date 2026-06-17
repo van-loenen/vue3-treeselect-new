@@ -1204,7 +1204,7 @@ const toggleClickOutsideEvent = (enabled) => {
   if (enabled) {
     document.addEventListener('mousedown', handleClickOutside, false)
   } else {
-    document.removeEventListener('mousedown', handleClickOutside, false)
+    document.removeEventListener('blur', handleClickOutside, false)
   }
 };
 const getValueContainer = () => {
@@ -1220,32 +1220,24 @@ const blurInput = () => {
   getInput().blur()
 };
 const handleMouseDown = (evt: Event) => {
-  console.log('1')
     evt.preventDefault()
     evt.stopPropagation()
 
-      console.log('2')
     if (props.disabled) return
 
-      console.log('3', props.openOnClick, state.menu.isOpen)
     //isClickedOnValueContainer && 
     const isClickedOnValueContainer = getValueContainer().$el.contains(evt.target)
     if (!state.menu.isOpen && (props.openOnClick || state.trigger.isFocused)) {
-       console.log('3.1')
       openMenu()
     }
 
-     console.log('4')
     if (state._blurOnSelect) {
-       console.log('5')
       blurInput()
     } else {
-       console.log('6')
       // Focus the input or prevent blurring.
       focusInput()
     }
 
-     console.log('7')
     resetFlags()
   };
 const handleClickOutside = (evt) => {
@@ -1458,10 +1450,8 @@ const openMenu = () => {
 };
 const toggleMenu = () => {
   if (state.menu.isOpen) {
-    console.log('[close]')
     closeMenu()
   } else {
-    console.log('[open]')
     openMenu()
   }
 };
