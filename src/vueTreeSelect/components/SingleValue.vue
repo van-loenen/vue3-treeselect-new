@@ -1,4 +1,5 @@
 <template>
+  <div style="display: flex;">
     <template v-if="hasValue">
       <div class="vue-treeselect__value-container">
         <div class="vue-treeselect__single-value s-value-container">
@@ -9,7 +10,10 @@
       </div>
     </template>
     <Placeholder class="s-value-container" v-if="!hasValue && !isFocused"/>
-    <Input ref="input" :class="{ 'as-overlay': hasValue }" />
+    <div v-if="!hasValue" class="s-value-container" style="padding: 5px;">
+      <Input ref="input" />
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -22,16 +26,20 @@
     components: { Placeholder, Input },
     computed: {
       node() {
-        return this.instance.selectedNodes.value[0];
+        console.log(this.instance?.selectedNodes.value[0].label)
+
+        
+
+        return this.instance?.selectedNodes.value[0];
       },
       hasValue() {
-        return  this.instance.hasValue.value;
+        return  this.instance?.hasValue.value;
       },
       hasActiveQuery() {
-        return this.instance.trigger.searchQuery;
+        return this.instance?.trigger.searchQuery;
       },
       isFocused() {
-        return this.instance.trigger.isFocused;
+        return this.instance?.trigger.isFocused;
       },
     }
   }

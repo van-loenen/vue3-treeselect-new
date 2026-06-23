@@ -433,12 +433,6 @@
 .vue-treeselect__single-value {
   .text-truncate();
   .horizontal-padding(@treeselect-padding);
-
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   line-height: @treeselect-control-inner-height;
   user-select: none;
   pointer-events: none;
@@ -800,6 +794,7 @@
   .vue-treeselect--single & {
     background: @treeselect-option-selected-bg;
     font-weight: 600;
+    color: white;
 
     &:hover {
       background: @treeselect-option-selected-bg-hover;

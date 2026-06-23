@@ -1214,10 +1214,10 @@ const getInput = () => {
   return getValueContainer().$refs.input
 };
 const focusInput = () => {
-  getInput().focus()
+  getInput()?.focus()
 };
 const blurInput = () => {
-  getInput().blur()
+  getInput()?.blur()
 };
 const handleMouseDown = (evt: Event) => {
     evt.preventDefault()
