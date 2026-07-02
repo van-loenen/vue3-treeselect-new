@@ -577,7 +577,7 @@ var dt = /*#__PURE__*/ G(Y, [["render", ut]]), X = {
 	},
 	computed: {
 		node() {
-			return console.log(this.instance?.selectedNodes.value[0].label), this.instance?.selectedNodes.value[0];
+			return this.instance?.selectedNodes.value[0];
 		},
 		hasValue() {
 			return this.instance?.hasValue.value;
@@ -1864,7 +1864,9 @@ p(t);
 			if (e === N.value.length) return at();
 			K(L(N.value[e]));
 		}, ct = () => {
-			P.value && K(L((0, Re.default)(N.value)));
+			if (!P.value) return;
+			let e = (0, Re.default)(N.value);
+			K(L(e));
 		}, lt = () => {
 			D.trigger.searchQuery = "";
 		}, J = () => {
@@ -2036,10 +2038,10 @@ p(t);
 		}, $ = (e) => {
 			we(D.forest.selectedNodeIds, e.id), delete D.forest.selectedNodeMap[e.id];
 		}, St = () => {
-			if (j.value) {
-				if (M.value) return yt();
-				vt(L((0, Re.default)(A.value)));
-			}
+			if (!j.value) return;
+			if (M.value) return yt();
+			let e = (0, Re.default)(A.value), t = L(e);
+			vt(t);
 		}, Ct = () => {
 			let e = G();
 			// istanbul ignore else

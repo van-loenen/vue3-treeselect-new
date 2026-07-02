@@ -26,10 +26,6 @@
     components: { Placeholder, Input },
     computed: {
       node() {
-        console.log(this.instance?.selectedNodes.value[0].label)
-
-        
-
         return this.instance?.selectedNodes.value[0];
       },
       hasValue() {
